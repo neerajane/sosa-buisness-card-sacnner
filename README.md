@@ -1,11 +1,5 @@
 
----
 
-# 2. Business Card Scanner
-
-I'd use this version for now because your project is still being completed. It doesn't overclaim anything.
-
-```markdown
 # Business Card Scanner
 
 An OCR-based application for extracting contact information from business card images and organizing the extracted information for digital use and Excel-based sales workflows.
@@ -33,7 +27,7 @@ The planned workflow supports both contact creation and Excel-based lead managem
 
 ## Planned Workflow
 
-```text
+
 Business Card Image
         ↓
    OCR Processing
