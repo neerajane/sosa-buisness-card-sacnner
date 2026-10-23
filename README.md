@@ -1,4 +1,4 @@
-# Business Card Scanner
+# SOSA Business Card Scanner
 
 An OCR-based application for extracting contact information from business card images and organizing the extracted information for digital use and Excel-based sales workflows.
 
