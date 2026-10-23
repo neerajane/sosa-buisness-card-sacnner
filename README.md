@@ -1,56 +1,115 @@
-# Welcome to your Expo app 👋
+# SOSA Business Card Scanner
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An OCR-based application for extracting contact information from business card images and organizing the extracted information for digital use and Excel-based sales workflows.
 
-## Get started
+> **Project Status:** In Development
 
-1. Install dependencies
+## Overview
 
-   ```bash
-   npm install
-   ```
+The Business Card Scanner is designed to reduce the manual effort involved in entering contact information from physical business cards.
 
-2. Start the app
+The application processes a business card image, extracts relevant information using Optical Character Recognition (OCR), and structures the extracted information for further use.
 
-   ```bash
-   npx expo start
-   ```
+The workflow is designed to support both contact creation and Excel-based lead management.
 
-In the output, you'll find options to open the app in a
+## Key Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* Business card image scanning
+* OCR-based text extraction
+* Extraction and structuring of contact details
+* Export of extracted information to Excel
+* Add extracted contacts to phone contacts
+* Add data to a new Excel spreadsheet
+* Add data to an existing Excel spreadsheet
+* Easy sharing of extracted information with sales teams
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Application Workflow
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+Business Card Image
+        ↓
+   OCR Processing
+        ↓
+   Text Extraction
+        ↓
+Information Structuring
+        ↓
+   ┌───────────────┐
+   │               │
+Contacts        Excel
+   │               │
+Phone Contact   New / Existing Sheet
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Tech Stack
 
-### Other setup steps
+* **Python**
+* **OCR**
+* **React** — frontend interface
+* **Excel / Spreadsheet Integration**
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Additional libraries and implementation details will be documented as development progresses.
 
-## Learn more
+## How It Works
 
-To learn more about developing your project with Expo, look at the following resources:
+### 1. Scan Business Card
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+The user provides an image of a physical business card.
 
-## Join the community
+### 2. Extract Text
 
-Join our community of developers creating universal apps.
+OCR processing identifies and extracts the text present on the card.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 3. Structure Information
+
+The extracted text is processed and organized into relevant fields such as:
+
+* Name
+* Company
+* Job Title
+* Phone Number
+* Email
+* Website
+* Address
+
+### 4. Choose an Action
+
+The structured information can then be used to:
+
+* Create a phone contact
+* Add the information to a new Excel spreadsheet
+* Add the information to an existing Excel spreadsheet
+
+### 5. Share and Manage
+
+The Excel-based workflow makes it easier to share collected contacts with sales teams and maintain a centralized list of leads.
+
+## Use Case
+
+The application is intended for individuals and sales teams who regularly collect business cards and need a faster way to digitize and organize contact information.
+
+Instead of manually entering contact details from each business card, the application automates the initial extraction and structuring process.
+
+## Project Status
+
+The application is currently in development, with the core OCR and data-processing workflow being implemented alongside the frontend interface and export functionality.
+
+The project is being refined toward a complete end-to-end workflow from business card scanning to contact or spreadsheet export.
+
+## Planned Improvements
+
+* Improve OCR accuracy across different business card layouts
+* Add validation and editing before export
+* Improve extraction of phone numbers, emails, and websites
+* Support multiple business cards in a batch
+* Improve Excel formatting and data organization
+* Complete and refine the React-based interface
+* Add additional contact-management and export options
+
+## Demo
+
+A demonstration video and live demo will be added once the application reaches a stable release.
+
+## Author
+
+**Neeraj Anemajal**
